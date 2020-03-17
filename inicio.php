@@ -16,7 +16,7 @@
 	$mbd = new PDO("mysql:host=$servidor;dbname=$base_datos", $usuario, $contraseña);
 
 	//Sentencia para consultar los datos de la bd
-	$alumnos = $mbd->query('SELECT * from alumno');
+	$alumnos = $mbd->query('SELECT * from alumno')->fetchAll();
 
 	$mbd = null;
 	} catch (PDOException $e) {
